@@ -3,6 +3,8 @@ module Sorcery
     module Config
       class << self
         attr_accessor :submodules
+        # automatically include controller concerns
+        attr_accessor :include_controller_concerns
         # what class to use as the user class.
         attr_accessor :user_class
         # what controller action to call for non-authenticated users.
@@ -24,6 +26,7 @@ module Sorcery
           @defaults = {
             :@user_class                           => nil,
             :@submodules                           => [],
+            :@include_controller_concerns          => true,
             :@not_authenticated_action             => :not_authenticated,
             :@login_sources                        => [],
             :@after_login                          => [],

@@ -9,6 +9,11 @@ Rails.application.config.sorcery.submodules = []
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
   # -- core --
+  # Whether or not to automatically include sorcery controller concerns
+  # Default: `true`
+  #
+  # config.include_controller_concerns = 
+
   # What controller action to call for non-authenticated users. You can also
   # override the 'not_authenticated' method of course.
   # Default: `:not_authenticated`
